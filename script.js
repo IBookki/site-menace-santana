@@ -1,13 +1,31 @@
 const albums = document.querySelectorAll(".album");
 const mainPage = document.getElementById("main-page");
 const scene = document.getElementById("scene");
+const hero = document.querySelector(".hero");
 let scrollY = 0,
   currentY = 0;
+const heroHeight = window.innerHeight;
 const maxScroll = albums.length * 1000;
 let currentColor = "red";
 let currentStyle = 1;
+let pageScroll = 0;
 
 function animate() {
+  pageScroll = window.pageYOffset || document.documentElement.scrollTop;
+  
+  if (pageScroll >= heroHeight * 0.8) {
+    hero.classList.add("scrolled");
+  } else {
+    hero.classList.remove("scrolled");
+  }
+  
+  if (pageScroll >= heroHeight) {
+    const albumScroll = pageScroll - heroHeight;
+    scrollY = Math.min(albumScroll * 2, maxScroll);
+  } else {
+    scrollY = 0;
+  }
+  
   currentY += (scrollY - currentY) * 0.08;
   albums.forEach((album, i) => {
     const z = -i * 1000 + currentY;
@@ -19,9 +37,9 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
-window.addEventListener("wheel", (e) => {
-  scrollY = Math.max(0, Math.min(scrollY + e.deltaY * 2, maxScroll));
+window.addEventListener("scroll", () => {
 });
+
 animate();
 
 function drawCanvas(style, color = currentColor) {
