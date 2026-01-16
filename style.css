@@ -57,7 +57,7 @@ body {
   color: #fff;
 }
 
-.hero-title {
+h2 {
   font-family: "Jaro", sans-serif;
   font-size: 5vw;
   font-weight: 400;
@@ -309,4 +309,20 @@ h1 {
 .color-btn[data-color="orange"].active {
   border-color: #ff6600;
   box-shadow: 0 0 25px rgba(255, 102, 0, 0.7), inset 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+h3 {
+  font-family: "Jaro", sans-serif;
+  font-weight: 400;
+  font-size: 2vw;
+  margin: 10px 0 0 0;
+  color: darkred;
+}
+
+h4 {
+  font-family: "Jaro", sans-serif;
+  font-weight: 400;
+  font-size: 1.5vw;
+  margin: 5px 0 0 0;
+  color: darkred;
 }
