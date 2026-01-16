@@ -1,35 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FCP4</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="viewport">
-    <div class="scene" id="scene">
-      <div class="album"><img src="FCP3.png"></div>
-      <div class="album"><img src="intothedark.png"></div>
-      <div class="album"><img src="!.png"></div>
-      <div class="album"><img src="FCP2.png"></div>
-      <div class="album"><img src="vendredi13juin.png"></div>
-      <div class="album"><img src="guapman.png"></div>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="viewport">
+      <div class="scene" id="scene">
+        <div class="album"><img src="FCP3.png" /></div>
+        <div class="album"><img src="intothedark.png" /></div>
+        <div class="album"><img src="!.png" /></div>
+        <div class="album"><img src="FCP2.png" /></div>
+        <div class="album"><img src="vendredi13juin.png" /></div>
+        <div class="album"><img src="guapman.png" /></div>
+      </div>
+      <div class="main-page" id="main-page">
+        <link
+          href="https://fonts.googleapis.com/css?family=Raleway:300,500,700,900"
+          rel="stylesheet"
+        />
+
+        <h1>
+          Freestyle Covid partie 4
+          <span class="drop"></span>
+          <span class="drop"></span>
+          <span class="drop"></span>
+          <span class="drop"></span>
+          <span class="drop"></span>
+        </h1>
+
+        <div class="red-square-container">
+          <canvas id="redCanvas" class="red-canvas"></canvas>
+          <img src="6663c6dc57f236d92aa223cc224488b8.png" alt="Silhouette" class="silhouette-img" />
+        </div>
+
+        <div class="style-buttons">
+          <button class="style-btn active" data-style="1">Cover 1</button>
+          <button class="style-btn" data-style="2">Cover 2</button>
+          <button class="style-btn" data-style="3">Cover 3</button>
+          <button class="style-btn" data-style="4">Cover 4</button>
+        </div>
+      </div>
     </div>
-  <div class="main-page" id="main-page">
-<link href="https://fonts.googleapis.com/css?family=Raleway:300,500,700,900" rel="stylesheet">
-
-
-
-<h1>
-Freestyle Covid partie 4  
-  <span class="drop"></span>
-  <span class="drop"></span>
-  <span class="drop"></span>
-  <span class="drop"></span>
-  <span class="drop"></span>
-</h1>  </div>
-  </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
